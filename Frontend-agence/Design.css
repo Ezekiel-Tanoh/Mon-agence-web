@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+:root {
+  --couleur-bleu-nuit: #172554;     /* titres, texte important, footer */
+  --couleur-violet: #7C3AED;        /* boutons, liens, éléments interactifs */
+  --couleur-jaune: #FACC15;         /* accents, badges, détails */
+  --couleur-blanc: #FFFFFF;         /* fond principal, cartes */
+  --couleur-bleu-clair: #E8EEF7;    /* fonds secondaires, séparateurs */
+ 
+  --police-titre: 'Space Grotesk', sans-serif;
+  --police-texte: 'Inter', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--police-texte);
+  color: var(--couleur-bleu-nuit);
+  background-color: var(--couleur-blanc);
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.en-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background-color: var(--couleur-blanc);
+  border-bottom: 1px solid var(--couleur-bleu-clair);
+}
+.logo {
+  font-family: var(--police-titre);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--couleur-bleu-nuit);
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+.logo-1 {
+  color: var(--couleur-violet);
+}
+.logo-2 {
+  font-family: var(--police-texte);
+  font-weight: 500;
+  font-size: 0.65rem;
+  color: #8A93A8;
+  letter-spacing: 1px;
+  margin-left: 0.3rem;
+}
+.liens{
+    display: flex;
+    gap: 2rem;
+}
+.liens a{
+    font-family: var(--police-texte);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--couleur-bleu-nuit);
+    transition: color 0.2s ease;
+}
+.liens a:hover{
+    color: var(--couleur-violet)
+}
+.btn-cta {
+  background-color: var(--couleur-violet);
+  color: var(--couleur-blanc);
+  font-family: var(--police-texte);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+.btn-cta:hover{
+    opacity: 0.85;
+}
+.lien-actif {
+  color: var(--couleur-violet)!important;
+}
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 560px;
+  padding: 3rem;
+  background-image: url('image/hero-fond.png');
+  background-size: cover;
+  background-position: center;
+}
+ 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.85) 35%,
+    rgba(255, 255, 255, 0.2) 65%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+ 
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+ 
+.hero-text h1 {
+  font-family: var(--police-titre);
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 1.25;
+  color: var(--couleur-bleu-nuit);
+  margin-bottom: 1.2rem;
+}
+ 
+.mot-accent {
+  color: var(--couleur-violet);
+}
+ 
+.hero-text p {
+  font-size: 1.05rem;
+  color: #4B5470;
+  margin-bottom: 2rem;
+}
+ 
+.hero-boutons {
+  display: flex;
+  gap: 1rem;
+}
+ 
+.btn-primaire {
+  background-color: var(--couleur-violet);
+  color: var(--couleur-blanc);
+  font-weight: 500;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  transition: opacity 0.2s ease;
+}
+ 
+.btn-primaire:hover {
+  opacity: 0.85;
+}
+ 
+.btn-secondaire {
+  background-color: transparent;
+  color: var(--couleur-bleu-nuit);
+  font-weight: 500;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  border: 1px solid #C7D0E0;
+  transition: border-color 0.2s ease;
+}
+ 
+.btn-secondaire:hover {
+  border-color: var(--couleur-violet);
+}
+ 
+.hero-visuel-conteneur {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+ 
+.hero-visuel-forme {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+ 
+.forme-jaune {
+  width: 26px;
+  height: 26px;
+  background-color: var(--couleur-jaune);
+  top: -14px;
+  left: 20px;
+}
+ 
+.forme-violette {
+  width: 70px;
+  height: 70px;
+  background-color: var(--couleur-violet);
+  opacity: 0.12;
+  bottom: -20px;
+  right: 10px;
+  border-radius: 16px;
+}
+ 
+.hero-visuel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--couleur-blanc);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(23, 37, 84, 0.15), 0 2px 8px rgba(23, 37, 84, 0.06);
+  padding: 1.5rem;
+}
