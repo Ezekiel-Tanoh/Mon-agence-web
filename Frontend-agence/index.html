@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZORA — Agence web</title>
+  <link rel="icon" type="image/png" href="image/icone.png">
+  <link rel="stylesheet" href="Design.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="en-tete">
+    <div class="logo">
+      <span class="logo-1"><img src="image/icone.png" alt="" width="30px"></span> ZORA
+      <span class="logo-2">AGENCE WEB</span>
+    </div>
+    <nav class="liens" id="liens-nav">
+      <a href="#accueil" class="lien-actif">Accueil</a>
+      <a href="#services">Services</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn-cta">Expliquez nous votre projet</a>
+     <button class="burger" id="burger" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-text">
+      <h1>Votre entreprise mérite une présence <span class="mot-accent">digitale</span> à la hauteur de vos ambitions.</h1>
+      <p>Nous concevons des sites web et des applications modernes, adaptées aux besoins réels des entrepreneurs et PME en Côte d'Ivoire.</p>
+      <div class="hero-boutons">
+        <a href="#contact" class="btn-primaire">Démarrer votre projet</a>
+        <a href="#services" class="btn-secondaire">Découvrir nos services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Nos services</h2>
+    <p class="services-intro">De la première idée à la mise en ligne, nous construisons des solutions simples, modernes et adaptées à vos objectifs.</p>
+ 
+    <div class="services-layout">
+ 
+      <ul class="services-liste">
+        <li class="service-nom actif" data-service="sites-web">Sites web</li>
+        <li class="service-nom" data-service="ecommerce">E-commerce &amp; applications</li>
+        <li class="service-nom" data-service="maintenance">Maintenance</li>
+      </ul>
+ 
+      <div class="services-detail">
+        <h3 id="detail-titre">Sites web</h3>
+        <p id="detail-texte">Site vitrine, landing page ou institutionnel. Présentez votre entreprise avec un site professionnel, rapide et adapté à tous les écrans.</p>
+        <div class="detail-tags" id="detail-tags">
+          <span class="tag">Vitrine</span>
+          <span class="tag">Landing page</span>
+          <span class="tag">Présentation</span>
+        </div>
+        <a href="#contact" class="detail-lien">En savoir plus →</a>
+      </div>
+ 
+    </div>
+  </section>
+ 
+
+  <!-- REALISATIONS -->
+  <section id="realisations" class="realisations">
+    <h2>Des projets construits avec intention</h2>
+    <p class="realisations-intro">Quelques projets réalisés pour des entreprises et des concepts personnels qui montrent notre savoir-faire.</p>
+ 
+    <div class="carrousel-conteneur">
+      <button class="carrousel-fleche fleche-gauche" aria-label="Précédent">←</button>
+ 
+      <div class="carrousel" id="carrousel">
+ 
+        <a href="#" target="_blank" rel="noopener noreferrer" class="projet-carte">
+          <img src="image/la-mer-apercu.png" alt="Site La Mer Hôtel">
+          <div class="projet-contenu">
+            <h3>La Mer — Hôtel boutique</h3>
+            <p>Site vitrine avec système de réservation fonctionnel pour un hôtel fictif à Abidjan.</p>
+          </div>
+        </a>
+         <!-- ⚠️ remplace href="#" par la vraie URL une fois La Mer mis en ligne -->
+
+        <!-- les prochains projets viendront ici, même structure -->
+
+      </div>
+
+      <button class="carrousel-fleche fleche-droite" aria-label="Suivant">→</button>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos" class="apropos">
+    <div class="apropos-intro">
+      <h2>Une agence jeune, une approche rigoureuse</h2>
+      <p>Étudiant en génie logiciel, je développe cette agence avec une conviction simple : une petite entreprise mérite aussi des solutions numériques bien pensées.</p>
+    </div>
+ 
+    <div class="processus">
+      <div class="etape">
+        <div class="etape-icone">💡</div>
+        <span class="etape-nom">Idée</span>
+      </div>
+      <div class="etape">
+        <div class="etape-icone">✏️</div>
+        <span class="etape-nom">Conception</span>
+      </div>
+      <div class="etape">
+        <div class="etape-icone">💻</div>
+        <span class="etape-nom">Développement</span>
+      </div>
+      <div class="etape">
+        <div class="etape-icone">🚀</div>
+        <span class="etape-nom">Mise en ligne</span>
+      </div>
+      <div class="etape">
+        <div class="etape-icone">✅</div>
+        <span class="etape-nom">Suivi</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-intro">
+      <h2>Vous avez un projet en tête ?</h2>
+      <p>Parlons de votre activité, de vos besoins et de la solution qui pourrait réellement vous aider.</p>
+    </div>
+ 
+    <form id="contact-projet-form" class="contact-form">
+      <div class="champ-groupe">
+        <label>
+          Nom complet
+          <input type="text" id="cp-nom" name="nom" required>
+        </label>
+        <label>
+          Email / WhatsApp
+          <input type="text" id="cp-contact" name="contact" required>
+        </label>
+      </div>
+ 
+      <label>
+        Type de projet
+        <select id="cp-type" name="type-projet" required>
+          <option value="" disabled selected>Sélectionnez...</option>
+          <option value="site-vitrine">Site vitrine</option>
+          <option value="ecommerce">E-commerce / Application</option>
+          <option value="maintenance">Maintenance d'un site existant</option>
+          <option value="autre">Autre</option>
+        </select>
+      </label>
+ 
+      <label>
+        Votre message
+        <textarea id="cp-message" name="message" rows="4" placeholder="Parlez-nous de votre projet..." required></textarea>
+      </label>
+ 
+      <button type="submit">Envoyer ma demande →</button>
+    </form>
+ 
+    <div id="contact-projet-result"></div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-badges">
+      <span>✔ Design moderne et professionnel</span>
+      <span>✔ Dev. propre et performant</span>
+      <span>✔ Adapté aux PME et entrepreneurs</span>
+      <span>✔ Accompagnement personnalisé</span>
+      <span>✔ Solutions sur mesure</span>
+    </div>
+    <div class="footer-bas">
+      <div class="logo">
+        <span class="logo-1"><img src="image/icone.png" alt="" width="24px"></span> ZORA
+      </div>
+      <p>© 2026 ZORA Agence Web — Tous droits réservés</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
