@@ -135,15 +135,18 @@
       <p>Parlons de votre activité, de vos besoins et de la solution qui pourrait réellement vous aider.</p>
     </div>
  
-    <form id="contact-projet-form" class="contact-form">
+    <form id="contact-projet-form" class="contact-form"
+    action="https://formspree.io/f/maeyaqvv"
+    method="POST"
+    >
       <div class="champ-groupe">
         <label>
           Nom complet
           <input type="text" id="cp-nom" name="nom" required>
         </label>
         <label>
-          Email / WhatsApp
-          <input type="text" id="cp-contact" name="contact" required>
+          Email 
+          <input type="email" id="cp-contact" name="email" required>
         </label>
       </div>
  
@@ -163,7 +166,7 @@
         <textarea id="cp-message" name="message" rows="4" placeholder="Parlez-nous de votre projet..." required></textarea>
       </label>
  
-      <button type="submit">Envoyer ma demande →</button>
+      <button type="submit">Envoyer ma demande </button>
     </form>
  
     <div id="contact-projet-result"></div>
