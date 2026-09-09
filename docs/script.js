@@ -80,21 +80,53 @@ flecheGauche.addEventListener('click', function () {
 // FORMULAIRE DE CONTACT (PROJET)
 // ============================
  
+// ============================
+// FORMULAIRE DE CONTACT (PROJET)
+// ============================
+
 const formulaireProjet = document.getElementById('contact-projet-form');
 const resultatProjet = document.getElementById('contact-projet-result');
- 
-formulaireProjet.addEventListener('submit', function (event) {
+
+formulaireProjet.addEventListener('submit', async function (event) {
   event.preventDefault();
- 
-  const nom = document.getElementById('cp-nom').value;
-  const typeProjet = document.getElementById('cp-type').value;
- 
-  // On affiche un message de confirmation personnalisé
-  resultatProjet.textContent =
-    `Merci ${nom} ! Votre demande concernant "${typeProjet}" a bien été notée. Nous vous répondrons rapidement.`;
- 
-  // On vide le formulaire après l'envoi, pour repartir propre
-  formulaireProjet.reset();
+
+  const bouton = formulaireProjet.querySelector('button[type="submit"]');
+
+  // On désactive le bouton pendant l'envoi
+  bouton.disabled = true;
+  bouton.textContent = 'Envoi en cours...';
+
+  const formData = new FormData(formulaireProjet);
+
+  try {
+    const response = await fetch(formulaireProjet.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      const nom = document.getElementById('cp-nom').value;
+
+      resultatProjet.textContent =
+        `Merci ${nom} ! Votre demande a bien été envoyée. Nous vous répondrons rapidement.`;
+
+      formulaireProjet.reset();
+    } else {
+      resultatProjet.textContent =
+        '❌ Une erreur est survenue. Votre demande n’a pas pu être envoyée.';
+    }
+
+  } catch (error) {
+    resultatProjet.textContent =
+      '❌ Impossible de contacter le serveur. Vérifiez votre connexion internet.';
+  }
+
+  // On réactive le bouton
+  bouton.disabled = false;
+  bouton.textContent = 'Envoyer ma demande';
 });
  
 // ============================
